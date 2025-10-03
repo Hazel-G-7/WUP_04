@@ -1,0 +1,58 @@
+---
+title: "WUP_04"
+author: "Hazel"
+date: "fall 2025"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r Include=FALSE,echo=FALSE}
+require(knitr)
+require(tidyverse)
+require(tigerstats)
+GSScsv.csv <- read_csv("GSScsv.csv")
+
+```
+
+# Introduction
+
+<!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
+
+The data is in the file GSScsv.csv and came from the 2018 General Social Survey. The question to answer is to resolve this hypothesis.\
+$H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE\
+$H_a$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE
+
+# Methods
+
+<!--Mention that you intend to use chatGPT to the greatest extent possible. Give credit to chatGPT when you use it to create code in your report. Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+
+This data is numerical categorical and I'll use the helper file to help me solve the questions for this assignment.
+
+# Results
+
+<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+
+## Descriptive Results
+
+### Graphical Descriptive Result
+
+<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+### Numerical Descriptive Results
+
+<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+Looking at the favstats, I've noticed that the Q1 of 'Graduate Highschool' is bigger than the G3 of both Highschool and LT Highschool, showingf that there's statistical difference between the two.
+
+## Inferential Results
+
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+
+When I'd observed the inferential results, I found that he P-vlaue 00.00236, which tells me there's quite a difference between both of the categories.
+
+# Discussion and Conclusion
+
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+After analyzing the plot of the 98% confident level, I noticed that the confident intervals of zero do not pass through - which are LT Highschool Graduate, and HighSchool Graduate. To conclude, this suggests that they're quite different. We compared numerical and catgeorical using 5 categories.
